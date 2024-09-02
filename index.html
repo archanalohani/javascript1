@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        #nameDisplay {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="askNameButton">What's your name?</button>
+        <div id="nameDisplay"></div>
+    </div>
+
+    <script>
+        document.getElementById('askNameButton').addEventListener('click', function() {
+            let name = prompt("Please enter your name:");
+            if (name) {
+                document.getElementById('nameDisplay').textContent = `Hello, ${name}!`;
+            } else {
+                document.getElementById('nameDisplay').textContent = "Hello, stranger!";
+            }
+        });
+    </script>
+</body>
+</html>
